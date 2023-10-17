@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./AvailableMeals.module.css";
 import Card from "../UI/Card";
 import { dummyList } from "../Utils/dummyData";
+import MealItemForm from "./MealItemForm";
 
 const AvailableMeals = () => {
   const mealsList = dummyList.map((item) => (
@@ -10,6 +11,9 @@ const AvailableMeals = () => {
         <h3>{item.item_name}</h3>
         <div className={classes.description}>{item.description}</div>
         <div className={classes.price}> ₹{item.price}</div>
+      </div>
+      <div>
+        <MealItemForm />
       </div>
     </li>
   ));
