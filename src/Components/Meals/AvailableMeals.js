@@ -8,12 +8,12 @@ const AvailableMeals = () => {
   const mealsList = dummyList.map((item) => (
     <li key={item.id} className={classes.meal}>
       <div>
-        <h3>{item.item_name}</h3>
+        <h3>{item.name}</h3>
         <div className={classes.description}>{item.description}</div>
         <div className={classes.price}> ₹{item.price}</div>
       </div>
       <div>
-        <MealItemForm />
+        <MealItemForm item={item} id={item.id}/>
       </div>
     </li>
   ));
